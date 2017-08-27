@@ -21,6 +21,22 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<!--firebase initialize-->
+
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDpmfHboHIr_iGqs3GfcL67Qn_gYxRL1Pw",
+			authDomain: "rao-daniyal.firebaseapp.com",
+			databaseURL: "https://rao-daniyal.firebaseio.com",
+			projectId: "rao-daniyal",
+			storageBucket: "rao-daniyal.appspot.com",
+			messagingSenderId: "25364455593"
+		};
+		firebase.initializeApp(config);
+
+	</script>
 
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
@@ -42,9 +58,9 @@
 						</ul>
 						<!--/ uL#nav -->
 					</div>
-				
+
 				</div>
-				
+
 			</div>
 
 
@@ -57,13 +73,11 @@
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-12">
-					<h1>RAO DANIYAL</h1>
-					<h3>Software Engineer | raodaniyal1995@yahoo.com</h3>
-					<p>"Former Software Engineer/Developer with Good photography Skills""</p>
+					<h1 id="name"></h1>
+					<h3 id="description"></h3>
+					<p id="bio"></p>
 				</div>
-				<!--/.col-lg-12 -->
 			</div>
-			<!--/.row -->
 		</div>
 		<!--/.container -->
 	</div>
@@ -78,13 +92,8 @@
 					<h5>ABOUT</h5>
 				</div>
 				<div class="col-lg-8">
-					<p>
-						My name is Rao Daniyal and I am a Web Application Developer and Software Developer, currently living in Karachi, Pk. I have
-						a Bachelor of Science in Software Engineer(Final year) from ILMA University, and my primary focus and inspiration for
-						my studies is Web/App Development. In my free time, I use Social networking and do Street/Nature Photography. I am
-						both driven and self-motivated, and I am constantly experimenting with new technologies and techniques like React native.
-						I am very passionate about Web App Development, and strive to better myself as a developer, and the development community
-						as a whole.
+					<p id="introduction">
+
 					</p>
 				</div>
 
@@ -106,8 +115,7 @@
 				<h5>EDUCATION</h5>
 			</div>
 			<div class="col-lg-6">
-				<p><strong>Bachelor of Software Engineering</strong><br/> ILMA University <br/>
-					<i>4 Years Degree</i>
+				<p id="bachelor">
 				</p>
 			</div>
 			<div class="col-lg-3">
@@ -118,7 +126,7 @@
 			</div>
 
 			<div class="col-lg-6 col-lg-offset-3">
-				<p><strong>Intermediate</strong><br/> Board of Intermediate Education, karachi <br/>
+				<p id="intermediate">
 				</p>
 			</div>
 			<div class="col-lg-3">
@@ -127,7 +135,7 @@
 				</p>
 			</div>
 			<div class="col-lg-6 col-lg-offset-3">
-				<p><strong>Matriculation</strong><br/> Board of Secondary Education, karachi <br/>
+				<p id="matric">
 				</p>
 			</div>
 			<div class="col-lg-3">
@@ -157,9 +165,7 @@
 					<strong>Front-end Developer</strong><br/> Freelance<br/>
 				</p>
 				<p>
-					<more>
-						I work with Design in Campanies and agencies around the globe, building a strong Front-end for fast inclusive web interfaces
-						and experiences, with a strong focus on responsive Design, accessibility & performance.
+					<more id="frontend">
 
 					</more>
 				</p>
@@ -186,7 +192,7 @@
 						</div>
 					</div>
 					<h5>CSS</h5>
-					
+
 					<div class="progress">
 						<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0"
 						 aria-valuemax="100" style="width: 80%">
@@ -194,7 +200,7 @@
 						</div>
 					</div>
 					<h5>Bootstrap</h5>
-					
+
 					<div class="progress">
 						<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0"
 						 aria-valuemax="100" style="width: 50%">
@@ -202,7 +208,7 @@
 						</div>
 					</div>
 					<h5>JavaScript</h5>
-					
+
 					<div class="progress">
 						<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0"
 						 aria-valuemax="100" style="width: 70%">
@@ -210,7 +216,7 @@
 						</div>
 					</div>
 					<h5>Firebase</h5>
-					
+
 					<div class="progress">
 						<div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0"
 						 aria-valuemax="100" style="width: 40%">
@@ -236,41 +242,39 @@
 				<h5>PORTFOLIO</h5>
 			</div>
 			<div class="col-lg-6">
-				<p><a href="https://quizapp-83aa3.firebaseapp.com/"><img class="img-responsive" src="img/port01.jpg" alt=""></a></p>
+				<p>
+					<a id="link1"><img id="img1" class="img-responsive" alt="ToDo app"></a>
+				</p>
 			</div>
 			<div class="col-lg-3">
 				<h3>Quiz App</h3>
-				<p>
-					Quiz Taking Application based on JavaScript, HTML and CSS.
-						<br/>
-						<sm><i class="icon-tag"></i>Web Application</sm>
-					
+				<p id="quizapp">
+
 				</p>
 			</div>
 
 			<div class="col-lg-6 col-lg-offset-3">
-				<p><a href="https://todo-8d72f.firebaseapp.com/"><img class="img-responsive" src="img/port02.jpg" alt=""></a></p>
+				<p>
+					<a id="link2"><img class="img-responsive" id="img2" alt="Quiz App"></a>
+				</p>
 			</div>
 			<div class="col-lg-3">
 				<h3>ToDo App</h3>
-				<p>
-					Todo Web Application based on Firebase Realtime database. Develop by using JavaScript, html/css and bootstrap.
-						<br/>
-						<sm><i class="icon-tag"></i>Web Application</sm>
-					
+				<p id="todoapp">
+
+
 				</p>
 			</div>
 
 			<div class="col-lg-6 col-lg-offset-3">
-				<p><a href="https://signup-ce782.firebaseapp.com/"><img class="img-responsive" src="img/port03.jpg" alt=""></a></p>
+				<p>
+					<a id="link3"><img class="img-responsive" id="img3" alt="Sign-Up"></a>
+				</p>
 			</div>
 			<div class="col-lg-3">
 				<h3>Sign-Up/Login</h3>
-				<p>
-					Sign up and login form develop by using javaScript. Just design simple UI in html and CSS
-						<br/>
-						<sm><i class="icon-tag"></i> Web Application</sm>
-					
+				<p id="signup">
+
 				</p>
 			</div>
 
@@ -292,20 +296,20 @@
 				<div class="col-lg-4 col-lg-offset-1">
 					<h5>CONTACT</h5>
 					<form>
-                        <div class="form-group">
-                            <label>Name: </label>
-                            <input class="form-control" type="text" placeholder="Enter Name">
-                        </div>
-                        <div class="form-group">
-                            <label>Email: </label>
-                            <input class="form-control" type="text" placeholder="Enter Email">
-                        </div>
-                        <div class="form-group">
-                            <label>Message: </label>
-                            <textarea class="form-control" placeholder="Enter Message"></textarea>
-                        </div>
-                        <button class="btn btn-default">Submit</button>
-                    </form>
+						<div class="form-group">
+							<label>Name: </label>
+							<input id="getName" class="form-control" type="text" placeholder="Enter Name">
+						</div>
+						<div class="form-group">
+							<label>Email: </label>
+							<input id="getEmail" class="form-control" type="email" placeholder="Enter Email">
+						</div>
+						<div class="form-group">
+							<label>Message: </label>
+							<textarea id="getMsg" class="form-control" placeholder="Enter Message"></textarea>
+						</div>
+						<button class="btn btn-default" onclick="submitFunc()">Submit</button>
+					</form>
 
 				</div>
 				<div class="col-lg-3">
@@ -325,10 +329,10 @@
 					</p>
 					<p>
 						<a href="mailto:raodaniyal1995@yahoo.com"><i class="icon-envelope"></i></a>
-						<a href="https://twitter.com/n0tyourbhai"><i class="icon-twitter"></i></a>
-						<a href="https://facebook.com/rao.daniyal.39"><i class="icon-facebook"></i></a>
-						<a href="https://www.linkedin.com/in/rao-daniyal-6558b5104/"><i class="icon-linkedin"></i></a>
-						<a href="https://github.com/iam-raodani"><i class="icon-github"></i></a>
+						<a id="twitter" href=""><i class="icon-twitter"></i></a>
+						<a id="facebook" href=""><i class="icon-facebook"></i></a>
+						<a id="linkedin" href=""><i class="icon-linkedin"></i></a>
+						<a id="github" href=""><i class="icon-github"></i></a>
 
 					</p>
 				</div>
@@ -341,7 +345,7 @@
 
 	<div id="c">
 		<div class="container">
-			<p>Created by <a href="http://www.rao-daniyal.firebaseapp.com">RAO DANIYAL<sup>©</sup</a></p>
+			<p>Created by <a href="">RAO DANIYAL<sup>©</sup</a></p>
 
 		</div>
 	</div>
@@ -351,6 +355,7 @@
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="js/bootstrap.js"></script>
+	<script src="js/app.js"></script>
 </body>
 
 </html>
